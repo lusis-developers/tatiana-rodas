@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /aplicar?status=
+
+Sitemap: https://tatianarodas.com/sitemap.xml

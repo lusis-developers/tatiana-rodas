@@ -1,0 +1,76 @@
+@use 'variables' as *;
+
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+// Media query helper.
+//   @include respond-to(md) { ... }   → min-width: 768px
+@mixin respond-to($bp) {
+  @if $bp == sm {
+    @media (min-width: $bp-sm) { @content; }
+  } @else if $bp == md {
+    @media (min-width: $bp-md) { @content; }
+  } @else if $bp == lg {
+    @media (min-width: $bp-lg) { @content; }
+  } @else if $bp == xl {
+    @media (min-width: $bp-xl) { @content; }
+  } @else if $bp == 2xl {
+    @media (min-width: $bp-2xl) { @content; }
+  } @else {
+    @media (min-width: $bp) { @content; }
+  }
+}
+
+// Container with max-width + responsive padding.
+@mixin container($max: $container-max) {
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: $space-md;
+
+  @include respond-to(md) {
+    padding-inline: $space-lg;
+  }
+  @include respond-to(lg) {
+    padding-inline: $space-xl;
+  }
+}
+
+// Visually hide an element but keep accessible.
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Consistent focus ring.
+@mixin focus-ring($color: $shadow-focus) {
+  outline: none;
+  box-shadow: $color;
+}
+
+// Honor reduced-motion preference.
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+// Section vertical rhythm.
+@mixin section-padding {
+  padding-block: $space-2xl;
+
+  @include respond-to(md) {
+    padding-block: $space-3xl;
+  }
+  @include respond-to(lg) {
+    padding-block: $space-4xl;
+  }
+}

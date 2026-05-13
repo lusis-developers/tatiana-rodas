@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:jennakutcher.com)",
+      "Bash(file /Users/Usuario/Desktop/tatiana-rodas/images/*.jpeg)",
+      "WebFetch(domain:jennakutcherblog.com)",
+      "Bash(command -v pdftotext)",
+      "Bash(brew --prefix poppler)",
+      "Bash(/opt/homebrew/opt/poppler/bin/pdftotext *)"
+    ]
+  }
+}

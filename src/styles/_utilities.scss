@@ -1,0 +1,54 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =============================================================================
+// Utilities (small, intentional set)
+// =============================================================================
+
+.u-container {
+  @include container;
+}
+
+.u-container--narrow {
+  @include container($container-narrow);
+}
+
+.u-container--tight {
+  @include container($container-tight);
+}
+
+.u-section {
+  @include section-padding;
+}
+
+.u-stack > * + * {
+  margin-top: var(--stack-gap, #{$space-md});
+}
+
+.u-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, #{$space-sm});
+  align-items: center;
+}
+
+.u-visually-hidden {
+  @include visually-hidden;
+}
+
+.u-skip-link {
+  position: absolute;
+  top: $space-2xs;
+  left: $space-2xs;
+  padding: $space-2xs $space-sm;
+  background: $color-ink;
+  color: $color-paper;
+  border-radius: $radius-sm;
+  z-index: $z-modal;
+  transform: translateY(-200%);
+  transition: transform $dur-fast $ease-in-out;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}

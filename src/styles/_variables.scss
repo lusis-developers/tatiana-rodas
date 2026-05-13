@@ -1,0 +1,126 @@
+// =============================================================================
+// DESIGN TOKENS — Tatiana Rodas
+// Paleta cálida editorial (cream / terracota / oro), inspirada en jennakutcher.com
+// =============================================================================
+
+// -------- COLOR ---------------------------------------------------------------
+// Canvas warm neutrals
+$color-cream:        #F7F1E8;
+$color-cream-deep:   #EFE6D6;
+$color-ivory:        #FBF7F0;
+$color-paper:        #FFFFFF;
+
+// Brand accents
+$color-terracotta:        #C45A3A;   // CTA primaria
+$color-terracotta-deep:   #9E4528;
+$color-terracotta-soft:   #E8B69E;
+$color-gold:              #B8894A;   // Acento secundario / eyebrow / divisores
+$color-gold-soft:         #D9B879;
+
+// Warm-shifted neutrals
+$color-ink:           #1B1410;
+$color-charcoal:      #3B2E26;
+$color-stone:         #6B5B50;
+$color-stone-soft:    #A89788;
+$color-mist:          #E5DBCE;
+
+// Semantic
+$color-success: #5C7A3A;
+$color-error:   #B83A2E;
+$color-warning: #C9892C;
+
+// Aliases (compat con código previo)
+$primary:      $color-terracotta;
+$secondary:    $color-gold;
+$accent:       $color-gold-soft;
+$bg-body:      $color-cream;
+$text-main:    $color-charcoal;
+$text-heading: $color-ink;
+$white:        $color-paper;
+$black:        $color-ink;
+
+// -------- TYPOGRAPHY ----------------------------------------------------------
+$font-heading: 'DM Serif Display', 'Cormorant Garamond', Georgia, serif;
+$font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-quote:   'Cormorant Garamond', Georgia, serif;
+
+// Fluid scale (clamp min, vw, max)
+$fs-xs:   clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+$fs-sm:   clamp(0.875rem, 0.85rem + 0.15vw, 0.9375rem);
+$fs-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+$fs-lg:   clamp(1.125rem, 1.08rem + 0.25vw, 1.25rem);
+$fs-xl:   clamp(1.25rem, 1.18rem + 0.4vw, 1.5rem);
+$fs-2xl:  clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+$fs-3xl:  clamp(1.875rem, 1.6rem + 1.4vw, 2.5rem);
+$fs-4xl:  clamp(2.25rem, 1.85rem + 2vw, 3.25rem);
+$fs-5xl:  clamp(2.75rem, 2rem + 3.5vw, 4.5rem);
+$fs-6xl:  clamp(3.5rem, 2.4rem + 5vw, 6rem);
+
+$lh-tight:   1.05;
+$lh-snug:    1.2;
+$lh-normal:  1.45;
+$lh-relaxed: 1.65;
+
+$tracking-tight:  -0.02em;
+$tracking-normal: 0;
+$tracking-wide:   0.12em;
+
+// -------- SPACING (8px base) --------------------------------------------------
+$space-3xs: 0.25rem;
+$space-2xs: 0.5rem;
+$space-xs:  0.75rem;
+$space-sm:  1rem;
+$space-md:  1.5rem;
+$space-lg:  2rem;
+$space-xl:  3rem;
+$space-2xl: 4rem;
+$space-3xl: 6rem;
+$space-4xl: 8rem;
+$space-5xl: 12rem;
+
+// -------- LAYOUT --------------------------------------------------------------
+$container-max:    1240px;
+$container-narrow: 880px;
+$container-tight:  640px;
+
+// -------- BREAKPOINTS ---------------------------------------------------------
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+$bp-2xl: 1536px;
+
+// -------- RADIUS --------------------------------------------------------------
+$radius-xs:   2px;
+$radius-sm:   4px;
+$radius-md:   8px;
+$radius-lg:   14px;
+$radius-xl:   24px;
+$radius-pill: 999px;
+$radius-full: 9999px; // alias
+
+// -------- SHADOWS -------------------------------------------------------------
+$shadow-xs: 0 1px 2px rgba(27, 20, 16, 0.04);
+$shadow-sm: 0 2px 6px rgba(27, 20, 16, 0.06);
+$shadow-md: 0 10px 24px -8px rgba(27, 20, 16, 0.10);
+$shadow-lg: 0 24px 48px -16px rgba(27, 20, 16, 0.14);
+$shadow-focus: 0 0 0 3px rgba(196, 90, 58, 0.35);
+
+// -------- MOTION --------------------------------------------------------------
+$ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+$dur-fast:    150ms;
+$dur-base:    250ms;
+$dur-slow:    400ms;
+$dur-slower:  700ms;
+
+$transition-base:  all $dur-base $ease-out-soft;
+$transition-color: color $dur-fast $ease-in-out, background-color $dur-fast $ease-in-out;
+
+// -------- Z-INDEX -------------------------------------------------------------
+$z-base:    0;
+$z-elev-1:  10;
+$z-sticky:  100;
+$z-drawer:  200;
+$z-modal:   300;
+$z-toast:   400;

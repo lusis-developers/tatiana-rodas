@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+// =============================================================================
+// Base typography
+// =============================================================================
+
+h1, h2, h3, h4 {
+  font-family: $font-heading;
+  color: $text-heading;
+  line-height: $lh-tight;
+  letter-spacing: $tracking-tight;
+  font-weight: 400;
+}
+
+h5, h6 {
+  font-family: $font-body;
+  color: $text-heading;
+  font-weight: 600;
+  line-height: $lh-snug;
+}
+
+h1 { font-size: $fs-5xl; }
+h2 { font-size: $fs-4xl; line-height: $lh-snug; }
+h3 { font-size: $fs-3xl; line-height: $lh-snug; }
+h4 { font-size: $fs-2xl; line-height: $lh-snug; }
+h5 { font-size: $fs-xl; }
+h6 { font-size: $fs-lg; }
+
+p {
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $text-main;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: $fs-sm;
+  font-weight: 600;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  color: $color-gold;
+}
+
+.lead {
+  font-size: $fs-lg;
+  line-height: $lh-relaxed;
+  color: $color-charcoal;
+}
+
+.quote {
+  font-family: $font-quote;
+  font-style: italic;
+  font-size: $fs-3xl;
+  line-height: $lh-snug;
+  color: $text-heading;
+}
+
+.display {
+  font-family: $font-heading;
+  font-size: $fs-6xl;
+  line-height: $lh-tight;
+  letter-spacing: $tracking-tight;
+}
+
+strong, b { font-weight: 600; }
+
+em, i { font-style: italic; }
+
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
