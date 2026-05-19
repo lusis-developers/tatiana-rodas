@@ -1,6 +1,6 @@
 // =============================================================================
 // DESIGN TOKENS — Tatiana Rodas
-// Paleta cálida editorial (cream / terracota / oro), inspirada en jennakutcher.com
+// Paleta de cliente (ámbar / rojo / naranja) para branding principal
 // =============================================================================
 
 // -------- COLOR ---------------------------------------------------------------
@@ -11,11 +11,11 @@ $color-ivory:        #FBF7F0;
 $color-paper:        #FFFFFF;
 
 // Brand accents
-$color-terracotta:        #C45A3A;   // CTA primaria
-$color-terracotta-deep:   #9E4528;
-$color-terracotta-soft:   #E8B69E;
-$color-gold:              #B8894A;   // Acento secundario / eyebrow / divisores
-$color-gold-soft:         #D9B879;
+$color-terracotta:        #FF5800;   // CTA primaria
+$color-terracotta-deep:   #FF0605;
+$color-terracotta-soft:   #E7AA51;
+$color-gold:              #E7AA51;   // Acento secundario / eyebrow / divisores
+$color-gold-soft:         #FFA500;
 
 // Warm-shifted neutrals
 $color-ink:           #1B1410;
@@ -26,8 +26,8 @@ $color-mist:          #E5DBCE;
 
 // Semantic
 $color-success: #5C7A3A;
-$color-error:   #B83A2E;
-$color-warning: #C9892C;
+$color-error:   #FF0605;
+$color-warning: #FFA500;
 
 // Aliases (compat con código previo)
 $primary:      $color-terracotta;
@@ -104,7 +104,7 @@ $shadow-xs: 0 1px 2px rgba(27, 20, 16, 0.04);
 $shadow-sm: 0 2px 6px rgba(27, 20, 16, 0.06);
 $shadow-md: 0 10px 24px -8px rgba(27, 20, 16, 0.10);
 $shadow-lg: 0 24px 48px -16px rgba(27, 20, 16, 0.14);
-$shadow-focus: 0 0 0 3px rgba(196, 90, 58, 0.35);
+$shadow-focus: 0 0 0 3px rgba(255, 88, 0, 0.35);
 
 // -------- MOTION --------------------------------------------------------------
 $ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
